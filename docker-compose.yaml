@@ -1,0 +1,14 @@
+version: '2'
+services:
+  graphql-engine:
+    image: hasura/graphql-engine:latest
+    ports:
+      - '80:8080'
+    restart: always
+    environment:
+      HASURA_GRAPHQL_DATABASE_URL: postgres://hasura:HasuraGezi.123@geziapp-prod.ccgvrluzqu3o.us-east-2.rds.amazonaws.com:5432/geziapp-prod
+      HASURA_GRAPHQL_ACCESS_KEY: HasuraGezi@123
+    command:
+      - graphql-engine
+      - serve
+      - --enable-console
