@@ -6,8 +6,8 @@ services:
       - '80:8080'
     restart: always
     environment:
-      HASURA_GRAPHQL_DATABASE_URL: postgres://hasura:HasuraGezi123@geziapp-test.ccgvrluzqu3o.us-east-2.rds.amazonaws.com:5432/gezi_db
-      HASURA_GRAPHQL_ACCESS_KEY: HasuraGezi@123
+      HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:pass@server:5432/dbname
+      HASURA_GRAPHQL_ACCESS_KEY: hasurakey
     command:
       - graphql-engine
       - serve
